@@ -1,0 +1,178 @@
+:root {
+    --backgrond: #000;
+    --text-color: #FFF;
+    --button: #8257E5;
+    --border: #29292E;
+    --border-menu-mobile: #A8A8B3;
+    --text-color-menu-mobile: #E1E1E6;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: black;
+    font-family: 'Manrope', sans-serif;
+    position: relative;
+    margin: 0;
+    height: 100Vh;
+    padding-top: 30px;
+}
+header{
+    display: flex;
+    justify-content: space-evenly;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+#logo img{
+    height: 45px;
+}
+#cabecalho{
+    display: flex;
+    gap: 35px;
+}
+#cabecalho a, #titulo{
+    color: white;
+}
+#cabecalho a{
+    font-size: 15px;
+    text-decoration-line: none;
+}
+#cabecalho a:hover{
+    color: #8257E5;
+}
+.botao{
+    border-radius: 10px;
+    color: white;
+    background: none;
+    height: 40px;
+    width: 200px;
+    border: #8257E5 solid 1px;
+    font-weight: 700;
+    font-size:12px;
+    cursor: pointer;
+}
+.botao:hover{
+    background-color: #8257E5;
+    border: #000;
+}
+#code{
+    text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
+h1{
+    margin: 0;
+    font-size:100px;
+}
+#blur_top{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+}
+#blur_bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+}
+#copo{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    bottom: 0;
+    justify-content: center;
+}
+.icon, h2, hr, #logo_mobile, #botao_mobile, #blur_mobile{
+    display: none;
+}
+#conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (max-width: 800px){
+    header{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    h1{
+        text-align: center;
+    }
+    #copo img{
+        height: 250px;
+    }
+}
+@media (max-width: 550px){
+    #copo img{
+        height: 200px;
+    }
+    h1{
+        font-size: 80px;
+    }
+}
+@media (max-width: 450px){
+    body{
+        background: rgb(0, 0, 0);
+        height: -webkit-fill-available;
+    }
+    html{
+        height: -webkit-fill-available;
+    }
+    header{
+        padding: 0px 10px;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .icon{
+        position: absolute;
+        right: 0;
+        display: inline-block;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    #blur_bottom, #blur_top, .nav, #logo, #botao_desktop{
+        display: none;
+    }
+    h2{
+        text-align: center;
+        color: #FFF;
+        display: inline-block;
+    }
+    hr{
+        border: #ffffff2c solid 0.1px;
+        display: block;
+    }
+    #logo_mobile, #botao_mobile, #blur_mobile{
+        display: block;
+    }
+    h1{
+        font-size: 40px;
+    }
+    #blur_mobile{
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+    }
+    #conteudo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    main{
+        gap: 105px;
+    }
+}
